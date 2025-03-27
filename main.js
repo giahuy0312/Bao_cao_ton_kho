@@ -4,6 +4,7 @@ sessionStorage.clear();
 const key = document.getElementById("livesearch");
 const column2Data = getColumnData('#myTable', 2);
 const table = document.getElementById('myTable');
+const rows = document.querySelectorAll('table tr');
 
 function getColumnData(tableSelector, columnIndex) {
     const table = document.querySelector(tableSelector);
@@ -49,7 +50,7 @@ function showRow(col) {
     // cell1 == getRows(5);
     // getRows(5).newRow;
 
-    table.appendChild(getRows[5]);
+    // table.appendChild(getRows[5]);
 
 }
 
@@ -131,40 +132,97 @@ function result(Array) {
 
 // Hàm lấy dòng
 function getRows(loc) {
-    const rows = document.querySelectorAll('table tr');
+    // const rows = document.querySelectorAll('table tr');
     const row = rows[loc]; // Lấy dòng thứ ba (chỉ mục bắt đầu từ 0)
-    console.log(row);
+    // console.log(row);
     return row;
 }
 
+// hàm ẩn dòng
+function hideRow() {
+    // const rows = document.querySelectorAll('tr');
+    for (let row = 2; row < rows.length; row++) {
+        const e = rows[row];
+        e.setAttribute('hidden', '');
+        // e = 'hidden';
+        
+        // console.log(e);
+        
+        // if (check != row) {
+        // } else {
+        //     e.removeAttribute('hidden');
+        // }
+        
+    }
+
+    // rows[check].removeAttribute('hidden');
+
+    // console.log(rows[5]);
+    
+
+    // arrRow.forEach(e => {
+    //     console.log(e);
+
+    // });
+}
+
+// const arr = ['5', '7', '10', '8'];
+// hideRow(arr);
 
 // showRow("test");
 
 // Hàm tìm kiếm theo từ khóa
 function showResult(str) {
     if (str.length == 0) {
-        document.getElementById("livesearch").innerHTML = "";
-        document.getElementById("livesearch").style.border = "0px";
+        // document.getElementById("livesearch").innerHTML = "";
+        // document.getElementById("livesearch").style.border = "0px";
+
         return;
     } else {
         // document.getElementById("livesearch").innerHTML = str;
-        showRow();
-        document.getElementById("livesearch").style.border = "1px solid #A5ACB2";
+        // document.getElementById("livesearch").style.border = "1px solid #A5ACB2";
+
+        // showRow();
+        hideRow();
         console.log(findData(str));
+
+        findData(str).forEach(e => {
+            console.log(e.index);
+            rows[e.index].removeAttribute('hidden');
+            // hideRow(e.index);
+            // getRows(e.index);
+            
+        });
     }
 }
-getRows(5);
 
 function findData(key) {
 
     const arr = column2Data;
     const keyword = key;
 
-    const results = arr.filter((item) =>
-        item.toLowerCase().includes(keyword.toLowerCase())
-    );
+    // const results = arr.filter((item) =>
+    //     item.toLowerCase().includes(keyword.toLowerCase())
+    // );
 
-    return results;
+    function findElementAndIndex(arr, keyword) {
+        return arr.reduce((acc, item, index) => {
+            if (item.toLowerCase().includes(keyword.toLowerCase())) {
+                acc.push({ element: item, index: index });
+            }
+            return acc;
+        }, []);
+    }
+
+    //   const arr = ["apple", "banana", "orange", "aple", "ApplePie"];
+    //   const keyword = "app";
+
+    const foundElements = findElementAndIndex(arr, keyword);
+    // console.log(foundElements);
+    // Kết quả: [{ element: "apple", index: 0 }, { element: "ApplePie", index: 4 }]
+
+    // return results;
+    return foundElements;
 }
 
 // Ví dụ: Lấy dữ liệu từ cột thứ 2 (index 1) của bảng có id "myTable"
