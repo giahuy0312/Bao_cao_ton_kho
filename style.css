@@ -1,0 +1,133 @@
+.input-search  {
+    border-radius: 0 !important;
+}
+
+.form-control:focus {
+    box-shadow: unset !important;
+}
+
+.cs88459560 {
+    color: #000080;
+    background-color: #C0FFC0;
+    border-left: #A9A9A9 1px solid;
+    border-top: #A9A9A9 1px solid;
+    border-right: #A9A9A9 1px solid;
+    border-bottom: #A9A9A9 1px solid;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    padding-left: 2px;
+}
+
+.cs7041FA5 {
+    color: #000080;
+    background-color: #FFC0CB;
+    border-left: #A9A9A9 1px solid;
+    border-top: #A9A9A9 1px solid;
+    border-right: #A9A9A9 1px solid;
+    border-bottom: #A9A9A9 1px solid;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    font-style: normal;
+    padding-left: 2px;
+}
+
+.csA60616AC {
+    color: #000080;
+    background-color: #FFC0CB;
+    border-left: #A9A9A9 1px solid;
+    border-top: #A9A9A9 1px solid;
+    border-right: #A9A9A9 1px solid;
+    border-bottom: #A9A9A9 1px solid;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    font-style: normal;
+    padding-left: 2px;
+    padding-right: 1px;
+}
+
+.cs48B7A5CC, .input-search {
+    color: #000080 !important;
+    background-color: #FFFFFF !important;
+    border-left: #A9A9A9 1px solid !important;
+    border-top: #A9A9A9 1px solid !important;
+    border-right: #A9A9A9 1px solid !important;
+    border-bottom: #A9A9A9 1px solid !important;
+    font-family: Tahoma !important;
+    font-size: 11px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    padding-left: 2px !important;
+}
+
+.csF0B87ACF {
+    color: #000080;
+    background-color: #FFFFFF;
+    border-left: #A9A9A9 1px solid;
+    border-top: #A9A9A9 1px solid;
+    border-right: #A9A9A9 1px solid;
+    border-bottom: #A9A9A9 1px solid;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    padding-left: 2px;
+    padding-right: 1px;
+}
+
+.cs392246E {
+    color: #000080;
+    background-color: transparent;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.cs2E67363E {
+    color: #000080;
+    background-color: transparent;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cs1C77B2AB {
+    color: #000080;
+    background-color: transparent;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-family: Tahoma;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.csF7D3565D {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+@media only screen and (max-width: 960px) {
+    table {
+        transform: scale(1); /* Phóng to bảng lên 150% */
+        transform-origin: top left; /* Giữ góc trên bên trái cố định */
+    }
+}
