@@ -29,10 +29,15 @@ function getRows(loc) {
 }
 
 // hàm ẩn dòng
-function hideRow() {
+function hideRow(check) {
     for (let row = 2; row < rows.length; row++) {
         const e = rows[row];
-        e.setAttribute('hidden', '');
+
+        if (check == 1) {
+            e.setAttribute('hidden', '');
+        } else {
+            e.removeAttribute('hidden');
+        }
         
     }
 
@@ -42,11 +47,11 @@ function hideRow() {
 // Hàm tìm kiếm theo từ khóa
 function showResult(str) {
     if (str.length == 0) {
-
+        hideRow(0);
         return;
     } else {
 
-        hideRow();
+        hideRow(1);
 
         findData(str).forEach(e => {
             rows[e.index].removeAttribute('hidden');
